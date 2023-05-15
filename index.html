@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KyokoAPI</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:title" content="KyokoAPI">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kyoko.rei.my.id">
+    <meta property="og:description" content="KyokoAPI - Generate Random Anime Pictures & Quotes, Trace Anime Screenshot To Find The Source, And Find Detail Information About Any Anime Titles!">
+    <meta property="og:image" content="https://i.ibb.co/ydWTXyD/kyoko.png">
+    <meta name="keywords" content="nsfw, sfw, anime, waifu, pics, discord, api">
+    <link rel="icon" href="https://i.ibb.co/ydWTXyD/kyoko.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+        body {
+            background: #ECEFF4;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            font-family: 'Klee One', cursive;
+            text-align: center;
+            line-height: 13px;
+        }
+
+        #rig {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            font-size: 0;
+            list-style: none;
+            background-color: none;
+        }
+
+        #rig li {
+            display: inline-block;
+            *display: inline;
+            width: 25%;
+            vertical-align: middle;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .rig-cell {
+            margin: 12px;
+            border-radius: 5px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            padding: 16px;
+            border: none;
+            color: #555;
+            background-color: white;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rig-cell h3 {
+            font-size: 18px;
+            font-family: 'Klee One', cursive;
+            font-weight: normal;
+        }
+
+        .rig-overlay {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background: white;
+            background-size: 50px 50px;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            transition: all 0.3s;
+        }
+
+        #rig li:hover .rig-overlay {
+            opacity: 0.5;
+        }
+
+        li:hover .rig-cell {
+            color: #D08770;
+        }
+
+        a {
+            text-decoration: none;
+            color: #D08770;
+        }
+
+        @media(max-width: 9000px) {
+            #rig li {
+                width: 25%;
+            }
+        }
+
+        @media(max-width: 800px) {
+            #rig li {
+                width: 33.33%;
+            }
+        }
+
+        @media(max-width: 500px) {
+            #rig li {
+                width: 50%;
+            }
+        }
+
+        @media(max-width: 350px) {
+            #rig li {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://i.ibb.co/ydWTXyD/kyoko.png" width="160" />
+    <h1>歳納京子</h1>
+    <h3>Toshino Kyoko</h3>
+    <h3>Generate Random Anime Pictures & Quotes,<br/><br/>Trace Anime Screenshot To Find The Source,<br/><br/>And Find Detail Information About Any Anime Titles!</h3>
+    <br/>
+    <ul id="rig">
+        <li>
+            <a class="rig-cell" href="./api/sfw.php">
+                <h3>Anime Waifu</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/blush.php">
+                <h3>Anime Blush</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/bonk.php">
+                <h3>Anime Bonk</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/hug.php">
+                <h3>Anime Hug</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/kiss.php">
+                <h3>Anime Kiss</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/quotes.php">
+                <h3>Anime Quote</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/slap.php">
+                <h3>Anime Slap</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/smile.php">
+                <h3>Anime Smile</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/smug.php">
+                <h3>Anime Smug</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/wave.php">
+                <h3>Anime Wave</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/wink.php">
+                <h3>Anime Wink</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/awoo.php">
+                <h3>Anime Awoo</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/bite.php">
+                <h3>Anime Bite</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+
+        <li>
+            <a class="rig-cell" href="./api/bully.php">
+                <h3>Anime Bully</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/cry.php">
+                <h3>Anime Cry</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/cuddle.php">
+                <h3>Anime Cuddle</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/dance.php">
+                <h3>Anime Dance</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/glomp.php">
+                <h3>Anime Glomp</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/handhold.php">
+                <h3>Anime Handhold</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/happy.php">
+                <h3>Anime Happy</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/highfive.php">
+                <h3>Anime Highfive</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/kick.php">
+                <h3>Anime Kick</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/kill.php">
+                <h3>Anime Kill</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/lick.php">
+                <h3>Anime Lick</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/myanimelist.php">
+                <h3>Anime Search</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/trace.php">
+                <h3>Anime Trace</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/nom.php">
+                <h3>Anime Nom</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+
+        <li>
+            <a class="rig-cell" href="./api/pat.php">
+                <h3>Anime Pat</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/poke.php">
+                <h3>Anime Poke</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/sfwNeko.php">
+                <h3>Anime Neko</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/random.php">
+                <h3>Anime Random</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/yeet.php">
+                <h3>Anime Yeet</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/trap.php">
+                <h3>Hentai Trap</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/blowjob.php">
+                <h3>Hentai Blowjob</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/nsfwNeko.php">
+                <h3>Hentai Neko</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+        <li>
+            <a class="rig-cell" href="./api/nsfw.php">
+                <h3>Hentai Waifu</h3>
+                <span class="rig-overlay"></span>
+            </a>
+        </li>
+    </ul>
+    <h3>Support Me!</h3>
+    <h3><a href="https://paypal.me/elliottophellia">Paypal</a> - <a href="https://saweria.co/elliottophellia">Saweria</a> - <a href="https://trakteer.id/elliottophellia">Trakteer</a> - <a href="https://ko-fi.com/elliottophellia">Kofi</a></h3>
+    <p>Credits :<br/><br/>Waifu.Pics, Jikan.Moe, Trace.Moe, KataNime.</p>
+</body>
+
+</html>
